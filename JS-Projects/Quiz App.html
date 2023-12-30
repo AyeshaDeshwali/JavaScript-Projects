@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/Quiz-App.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div id="box">
+                <h2 id="queBox">1) This is the dummy question</h2>
+                <div class="row">
+                    <input class="option" id="option1" type="radio" value="a" name="option">
+                    <label for="option1"> option 1</label>
+                </div>
+                <div class="row">
+                    <input class="option" id="option2" type="radio" value="b" name="option">
+                    <label for="option2">option 2</label>
+                </div>
+                <div class="row">
+                    <input class="option" id="option3" type="radio" value="c" name="option">
+                    <label for="option3">option 3</label>
+                </div>
+                <div class="row">
+                    <input class="option" id="option4" type="radio" value="d" name="option">
+                    <label for="option4"> option 4</label>
+                </div>
+                <button class="btn" onclick="submitQuiz()"><i class="fa fas fa-check-circle"></i> Submit</button>
+                <button class="btn restart" onclick="restartQuiz()"><i class="fa fa-light fa-power-off"></i>
+                    Reset</button>
+            </div>
+            <div class="newBtn">
+                <button onclick="restartQuiz()"><i class="fa fa-solid fa-hourglass-start"></i> New
+                    Start</button>
+            </div>
+        </div>
+    </section>
+    <script src="JS/Quiz-App.js"></script>
+</body>
+
+</html>
