@@ -1,4 +1,4 @@
-# JavaScript Projects Repository
+# JavaScript Projects
 
 Welcome to the JavaScript Projects repository! This collection of projects is designed to help you practice and improve your JavaScript skills. Each project comes with its own set of challenges to solve, providing a hands-on learning experience.
 
