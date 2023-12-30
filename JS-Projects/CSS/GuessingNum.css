@@ -1,0 +1,38 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
+input {
+  padding: 8px;
+  margin: 10px;
+}
+
+#guessSubmit {
+  background-color: #f20e78;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 7px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+#guessSubmit:hover {
+  background-color: #a91b65;
+}
+
+.message {
+  font-weight: bold;
+  margin-top: 20px;
+}

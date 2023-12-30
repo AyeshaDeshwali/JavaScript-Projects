@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>space war game</title>
+    <link rel="stylesheet" href="CSS/space-war.css">
+</head>
+
+<body>
+    <div class="game" id="game">
+        <div class="player" id="player"><img
+                src="https://github.com/Abhisek730/space-war-game/blob/main/pngegg%20(2).png?raw=true" alt=""></div>
+        <div class="alien" id="alien"><img
+                src="https://github.com/Abhisek730/space-war-game/blob/main/alien.png?raw=true" alt=""></div>
+    </div>
+
+    <div id="result">
+        <h1>Game Over</h1>
+        <p id="score"></p>
+        <button id="btn" onclick="location.reload()">Restart</button>
+    </div>
+
+    <audio id="shoot" src="fireex.wav"></audio>
+    <audio id="gameover" src="gameover.wav"></audio>
+
+    <script src="JS/space-war.js"></script>
+</body>
+
+</html>

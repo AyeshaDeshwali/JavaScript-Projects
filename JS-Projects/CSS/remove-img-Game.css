@@ -1,0 +1,19 @@
+body {
+  background-color: #4c4d51;
+}
+
+#box {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: rgb(148, 145, 145);
+}
+
+#box img {
+  width: 30%;
+  height: 300px;
+  border: 4px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
