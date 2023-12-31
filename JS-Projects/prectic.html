@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .member-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    #personImg {
+      max-width: 100%;
+      height: auto;
+    }
+    #members {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .member-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .member-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="member-container">
+    <div id="personName">Person Name</div>
+    <img
+      src="https://i.pinimg.com/550x/14/3c/ec/143cec547292a2fc48bc75db305f2a11.jpg"
+      alt=""
+      id="personImg"
+      height="350px"
+      width="350px"
+    />
+    <div id="personAbout">About</div>
+  </div>
+  <div id="members"></div>
+  <script>
+    const count = +prompt("Total family members?");
+    const members = [];
+    for (let i = 1; i <= count; i++) {
+      alert(`Enter details for member ${i}`);
+      const name = prompt("What is your name?");
+      const image = prompt("Image URL");
+      const about = prompt("About");
+      members.push({
+        name,
+        image,
+        about,
+      });
+    }
+    let buttons = "";
+    for (let value of members) {
+      buttons =
+        buttons +
+        `<button class="member-button" onclick="showImg('${value.name}')">${value.name}</button>`;
+    }
+    document.getElementById("members").innerHTML = buttons;
+
+    function showImg(name) {
+      const member = members.find((value) => {
+        return value.name === name;
+      });
+      document.getElementById("personName").textContent = member.name;
+      document.getElementById("personImg").src = member.image;
+      document.getElementById("personAbout").textContent = member.about;
+    }
+  </script>
+</body>
+</html>
