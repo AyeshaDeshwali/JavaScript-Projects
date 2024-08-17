@@ -1,8 +1,8 @@
 const slide = document.querySelectorAll(".slider");
 let counter = 0;
-
 slide.forEach((slide, index) => {
-  slide.style.bottom = `${index * 100}%`;
+  //   slide.style.bottom = `${index * 100}%`;
+  slide.style.left = `${index * 100}%`;
 });
 
 const goPrev = () => {
@@ -23,6 +23,7 @@ const goNext = () => {
 
 const slideImg = () => {
   slide.forEach((slide) => {
-    slide.style.transform = `translateY(${counter * 100}%)`;
+    // slide.style.transform = `translateY(${counter * 100}%)`;
+    slide.style.transform = `translateX(-${counter * 100}%)`;
   });
 };

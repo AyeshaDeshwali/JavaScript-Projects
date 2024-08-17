@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image-Slider</title>
     <link rel="stylesheet" href="CSS/Image-Slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,8 +23,8 @@
         <img src="https://picsum.photos/id/71/1000/500" class="slider" alt="">
     </main>
     <div class="btns">
-        <button onclick="goPrev()">Prev</button>
-        <button onclick="goNext()">Next</button>
+        <button onclick="goPrev()" class="prev"><i class="fa fa-arrow-left"></i> Prev</button>
+        <button onclick="goNext()" class="next">Next <i class="fa fa-arrow-right"></i></button>
     </div>
     <script src="JS/Image-Slider.js"></script>
 </body>

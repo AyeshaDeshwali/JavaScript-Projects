@@ -1,39 +1,44 @@
-const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowerSet = "abcdefghijklmnopqrstuvwxyz";
-const numberSet = "1234567890";
-const symbolSet = "~!@#$%^&*()_+/";
+let uperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let loverSet = "abcdefghijklmnopqrstuvwxyz";
+let numSet = "1234567890";
+let symSet = "!@#$%^&*()_+-";
 
-const passBox = document.getElementById("pass-box");
-const totalChar = document.getElementById("total-char");
-const upperInput = document.getElementById("upper-case");
-const lowerInput = document.getElementById("lower-case");
-const numberInput = document.getElementById("numbers");
-const symbolInput = document.getElementById("symbols");
+let passBox = document.getElementById("pass-box");
+let totalChar = document.getElementById("total-char");
+let uperInput = document.getElementById("upper-case");
+let lowerInput = document.getElementById("lower-case");
+let symInput = document.getElementById("symbols");
+let numInput = document.getElementById("numbers");
 
-const randomget = (pass) => {
-  return pass[Math.floor(Math.random() * pass.length)];
-};
+function randomNum(randomNum) {
+  return randomNum[Math.floor(Math.random() * randomNum.length)];
+}
 
-const genpass = (password = "") => {
-  if (upperInput.checked) {
-    password += randomget(upperSet);
+function genPass(pass = "") {
+  if (uperInput.checked) {
+    pass += randomNum(uperSet);
   }
   if (lowerInput.checked) {
-    password += randomget(lowerSet);
+    pass += randomNum(loverSet);
   }
-  if (numberInput.checked) {
-    password += randomget(numberSet);
+  if (numInput.checked) {
+    pass += randomNum(numSet);
   }
-  if (symbolInput.checked) {
-    password += randomget(symbolSet);
+  if (symInput.checked) {
+    pass += randomNum(symSet);
   }
-  if (password.length < totalChar.value) {
-    return genpass(password);
+  if (pass.length < totalChar.value) {
+    return genPass(pass);
   }
-  passBox.innerText = truncateString(password, totalChar.value);
-};
 
-document.getElementById("btn").addEventListener("click", () => genpass());
+  passBox.innerText = truncateString(pass, totalChar.value);
+  console.log(pass);
+}
+genPass();
+
+document.getElementById("btn").addEventListener("click", () => {
+  genPass();
+});
 
 function truncateString(str, num) {
   if (str.length > num) {

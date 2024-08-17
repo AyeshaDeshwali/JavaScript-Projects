@@ -21,6 +21,29 @@ main {
   transition: 1s;
 }
 
+.prev {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+}
+.next {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+}
+.prev i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.next i {
+  margin-left: 10px;
+  font-size: 20px;
+}
 .btns {
   margin-top: 15px;
   text-align: center;
@@ -28,4 +51,10 @@ main {
 .btns button {
   font-size: 25px;
   padding: 5px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgb(17, 17, 199);
+  cursor: pointer;
 }
